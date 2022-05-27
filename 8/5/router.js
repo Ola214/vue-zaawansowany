@@ -36,7 +36,8 @@ export default new Router({
       component: () => import('./views/Dashboard.vue'),
       children: [
         { path: '', component: () => import('./views/Dashboard/Home.vue') },
-        { path: 'users', component: () => import('./views/Dashboard/Users.vue') }
+        { path: 'users', component: () => import('./views/Dashboard/Users.vue') },
+        { path: 'history', component: () => import('./views/Dashboard/History.vue') }
       ]
     }
   ]

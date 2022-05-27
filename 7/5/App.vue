@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import TrainingOne from './components/TrainingOne.vue'
+import TrainingOne from './components/TrainingOneJSX.js'
 
 export default {
   name: 'app',

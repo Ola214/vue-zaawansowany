@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import AsyncQuery from './components/Features/AsyncQuery.vue'
-import BaseInput from './components/Features/BaseInput.vue'
-import SquareToCircle from './components/Features/SquareToCircle.vue'
+import AsyncQuery from './components/Features/AsyncQuery.js'
+import BaseInput from './components/Features/BaseInput.js'
+import SquareToCircle from './components/Features/SquareToCircle.js'
 
 export default {
   name: 'app',

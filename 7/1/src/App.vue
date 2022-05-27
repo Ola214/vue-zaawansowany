@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AnchoredHeader :level="1">Test</AnchoredHeader>
+    <AnchoredHeader :level="3">Test</AnchoredHeader>
   </div>
 </template>
  

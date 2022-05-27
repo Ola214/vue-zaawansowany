@@ -20,15 +20,13 @@
           </v-list-tile>
         </template>
         <v-list-tile key="Wyloguj" @click="logout">
-            <v-list-tile-action>
-              <v-icon>exit_to_app</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>
-                Wyloguj
-              </v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
+          <v-list-tile-action>
+            <v-icon>exit_to_app</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title> Wyloguj </v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
 
@@ -40,7 +38,9 @@
       fixed
     >
       <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
-        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+        <v-toolbar-side-icon
+          @click.stop="drawer = !drawer"
+        ></v-toolbar-side-icon>
         <span class="hidden-sm-and-down">Dashboard</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -49,27 +49,28 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <router-view/>
+      <router-view />
     </v-content>
   </v-app>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      dialog: false,
-      drawer: null,
-      items: [
-        { icon: 'dashboard', text: 'Dashboard', link: '/dashboard' },
-        { icon: 'contacts', text: 'Użytkownicy', link: '/dashboard/users' },
-        { icon: 'history', text: 'Historia', link: '/dashboard/history' }
-      ]
-    }),
-    methods: {
-        logout() {
-            localStorage.removeItem("loggedIn")
-            this.$router.push("/")
-        }
-    }
-  }
+export default {
+  data: () => ({
+    dialog: false,
+    drawer: null,
+    items: [
+      { icon: "dashboard", text: "Dashboard", link: "/dashboard" },
+      { icon: "contacts", text: "Użytkownicy", link: "/dashboard/users" },
+      { icon: "history", text: "Historia", link: "/dashboard/history" },
+      { icon: "content_copy", text: "Cele", link: "/dashboard/targets" },
+    ],
+  }),
+  methods: {
+    logout() {
+      localStorage.removeItem("loggedIn");
+      this.$router.push("/");
+    },
+  },
+};
 </script>

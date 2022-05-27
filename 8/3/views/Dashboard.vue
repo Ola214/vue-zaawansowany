@@ -62,7 +62,6 @@ export default {
     items: [
       { icon: "dashboard", text: "Dashboard", link: "/dashboard" },
       { icon: "contacts", text: "Użytkownicy", link: "/dashboard/users" },
-      { icon: "history", text: "Historia", link: "/dashboard/history" },
     ],
   }),
   methods: {
